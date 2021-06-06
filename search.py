@@ -2,13 +2,21 @@ from google_play_scraper import app
 import play_scraper
 import pandas as pd
 
+results=[]
+app_ids=[]
+titles=[]
+icons=[]
+urls=[]
+scores=[]
+details=[]
+installs=[]
+ratings=[]
+genres=[]
+des=[]
+reviews=[]
+containAds=[]
+
 def Search(query):
-    results=[]
-    app_ids=[]
-    titles=[]
-    icons=[]
-    urls=[]
-    scores=[]
 
     #similar apps from first page of gplay store 
     results.append(play_scraper.search(query,page=1))
@@ -21,14 +29,6 @@ def Search(query):
         urls.append(result['url'])
         scores.append(result['score'])
 
-
-    details=[]
-    installs=[]
-    ratings=[]
-    genres=[]
-    des=[]
-    reviews=[]
-    containAds=[]
 
     #get more details
     for id in app_ids:
@@ -58,5 +58,6 @@ def Search(query):
     data['containAd']=containAds
 
     #display it as html table
-    # display=data.to_html()
+    data=data.to_html()
     return data
+

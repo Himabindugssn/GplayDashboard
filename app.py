@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, request
+from flask import render_template, request,jsonify
 from search import Search
 app = Flask(__name__)
 
@@ -9,6 +9,7 @@ def index():
     
     if q:
         data=Search(q)
+        # data=jsonify(HTMLTab=data)
         return render_template('search.html',q=q, data=data)
 
     return render_template('index.html')

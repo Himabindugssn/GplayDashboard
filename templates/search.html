@@ -6,6 +6,7 @@
         </title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        <script src='static/Chart.min.js'></script>
 
     </head>
     <body>
@@ -39,12 +40,12 @@
             </div>
         </nav>
 
-        data = {{data}}
-
         <!-- dataframe of the results-->
         <h4>Search results for {{q}}</h4>
         <div>
-            {{data}} <!--dataframe of search-->
+            {{data|safe}} <!--dataframe of search-->
         </div>
+
+        
     </body>
 </html>
