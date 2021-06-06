@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import render_template, request
-from dummy import printme
+from search import Search
 app = Flask(__name__)
 
 @app.route('/', methods=['GET','POST'])
@@ -8,8 +8,8 @@ def index():
     q=request.args.get('query')
     
     if q:
-        a=printme(q) #dummy function - printme from a dummy.py file, these values will be passed on to the search html
-        return render_template('search.html',q=q, dummy=a)
+        data=Search(q)
+        return render_template('search.html',q=q, data=data)
 
     return render_template('index.html')
 
