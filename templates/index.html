@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Google Play Store Dashboard
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <!--navbar on home page-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="data:image/png;base64,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" 
+                alt="" width="35" height="35">
+              </a>
+              <a class="navbar-brand" href="#"><b>GPlay Dashboard</b></a>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <!--link to home page-->
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- search box button-->
+              <form class="d-flex" method="GET">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+
+              </form>
+
+            </div>
+        </nav>
+        <!-- content below navbar-->
+        <div class="container-fluid">
+            <h1>cards</h1>
+
+            <!-- categories -->
+            <div class="py-5">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95f5d6a6-f88f-4791-9407-9ad950927854/d8zhivv-b7a96646-a3d0-477c-ab5c-8deb5619052f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk1ZjVkNmE2LWY4OGYtNDc5MS05NDA3LTlhZDk1MDkyNzg1NFwvZDh6aGl2di1iN2E5NjY0Ni1hM2QwLTQ3N2MtYWI1Yy04ZGViNTYxOTA1MmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nWCy6M_YQqwvyii1mhgggcwfhhLekWIqasNEXsDak4E" 
+                            class="card-img-top" alt="..." width="50" height="300">
+                            <div class="card-body">
+                            <h5 class="card-title">ART AND DESIGN</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="category.html" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95f5d6a6-f88f-4791-9407-9ad950927854/d8zhivv-b7a96646-a3d0-477c-ab5c-8deb5619052f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk1ZjVkNmE2LWY4OGYtNDc5MS05NDA3LTlhZDk1MDkyNzg1NFwvZDh6aGl2di1iN2E5NjY0Ni1hM2QwLTQ3N2MtYWI1Yy04ZGViNTYxOTA1MmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nWCy6M_YQqwvyii1mhgggcwfhhLekWIqasNEXsDak4E" 
+                            class="card-img-top" alt="..." width="50" height="300">
+                            <div class="card-body">
+                            <h5 class="card-title">ART AND DESIGN</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95f5d6a6-f88f-4791-9407-9ad950927854/d8zhivv-b7a96646-a3d0-477c-ab5c-8deb5619052f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk1ZjVkNmE2LWY4OGYtNDc5MS05NDA3LTlhZDk1MDkyNzg1NFwvZDh6aGl2di1iN2E5NjY0Ni1hM2QwLTQ3N2MtYWI1Yy04ZGViNTYxOTA1MmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nWCy6M_YQqwvyii1mhgggcwfhhLekWIqasNEXsDak4E" 
+                            class="card-img-top" alt="..." width="50" height="300">
+                            <div class="card-body">
+                            <h5 class="card-title">ART AND DESIGN</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- categories -->
+            <div class="py-5">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95f5d6a6-f88f-4791-9407-9ad950927854/d8zhivv-b7a96646-a3d0-477c-ab5c-8deb5619052f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk1ZjVkNmE2LWY4OGYtNDc5MS05NDA3LTlhZDk1MDkyNzg1NFwvZDh6aGl2di1iN2E5NjY0Ni1hM2QwLTQ3N2MtYWI1Yy04ZGViNTYxOTA1MmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nWCy6M_YQqwvyii1mhgggcwfhhLekWIqasNEXsDak4E" 
+                            class="card-img-top" alt="..." width="50" height="300">
+                            <div class="card-body">
+                            <h5 class="card-title">ART AND DESIGN</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95f5d6a6-f88f-4791-9407-9ad950927854/d8zhivv-b7a96646-a3d0-477c-ab5c-8deb5619052f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk1ZjVkNmE2LWY4OGYtNDc5MS05NDA3LTlhZDk1MDkyNzg1NFwvZDh6aGl2di1iN2E5NjY0Ni1hM2QwLTQ3N2MtYWI1Yy04ZGViNTYxOTA1MmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nWCy6M_YQqwvyii1mhgggcwfhhLekWIqasNEXsDak4E" 
+                            class="card-img-top" alt="..." width="50" height="300">
+                            <div class="card-body">
+                            <h5 class="card-title">ART AND DESIGN</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95f5d6a6-f88f-4791-9407-9ad950927854/d8zhivv-b7a96646-a3d0-477c-ab5c-8deb5619052f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk1ZjVkNmE2LWY4OGYtNDc5MS05NDA3LTlhZDk1MDkyNzg1NFwvZDh6aGl2di1iN2E5NjY0Ni1hM2QwLTQ3N2MtYWI1Yy04ZGViNTYxOTA1MmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nWCy6M_YQqwvyii1mhgggcwfhhLekWIqasNEXsDak4E" 
+                            class="card-img-top" alt="..." width="50" height="300">
+                            <div class="card-body">
+                            <h5 class="card-title">ART AND DESIGN</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+              <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+    
+
+
+    </body>
+</html>
